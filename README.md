@@ -10,6 +10,8 @@ A map was created using Leaflet that plots all of the earthquakes from the data 
 2. Popups are provided that give additional information (location, depth and magnitude) about the earthquake when a marker is clicked.
 3. A legend that provides context on the depth/color scale was added.
  
+
+
 Step-2
 
 A second geoJSON file describing the global tectonic plate boundaries was obtained at <https://github.com/fraxen/tectonicplates>.
@@ -20,3 +22,4 @@ A second geoJSON file describing the global tectonic plate boundaries was obtain
 As expected there appears to be a strong visual correlation between earthquake locations and specific tectonic plates boundary locations.
 
 John Russell
+July 21, 2021
