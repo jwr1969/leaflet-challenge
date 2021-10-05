@@ -3,7 +3,6 @@
 * [Approach](#approach)
 * [Technologies](#technologies)
 * [ScreenShots](#screenshots)
-* [Code Examples](#examplecode)
 * [Setup](#setup)
 
 
@@ -39,35 +38,6 @@ The visualization is created with:
 
 ![Screenshot](Images/Screenshot.png)
 
-## Code Examples
-"""
-	function Legend()   {
-	var legend = L.control({ position: "bottomleft" });
-		legend.onAdd = function() {
-			var div = L.DomUtil.create("div", "info legend");
-			var limits = [128,64, 32, 16, 8, 4, 2, 0];
-			var colors = ['#800026', '#BD0026', '#E31A1C', '#FC4E2A', '#FD8D3C', '#FEB24C', '#FED976', '#FFEDA0'];
-			var labels = [];
-			var legendInfo = "<h1>Earthquake Depth</h1>" +
-			"<div class=\"labels\">" +
-				"<div class=\"min\">" + `${limits[0]} miles` + "</div>" +
-				"<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-			"</div>";
-		
-			div.innerHTML = legendInfo;
-		
-			limits.forEach(function(limit, index) {
-				labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
-			});
-		
-			div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-			return div;
-			};
-		
-		return legend
-	}   
-"""
-	
 ## Setup
 To run this project, download it locally from github:
 
