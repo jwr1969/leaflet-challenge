@@ -30,7 +30,7 @@ The above second data set was plotted on the map to illustrate the relationship 
 	
 ## Technologies
 The visualization is created with:
-* html, JavaScript, css
+* HTML, JavaScript, CSS
 * Mapbox
 * leaflet.js a JavaScript library
 * Data from the USGS and tectonic plate boundary JSON files from https://github.com/fraxen/tectonicplates.
@@ -41,49 +41,49 @@ The visualization is created with:
 
 ## Code Examples
 """
-function Legend()   {
-// Set up the legend
-var legend = L.control({ position: "bottomleft" });
-    legend.onAdd = function() {
-        var div = L.DomUtil.create("div", "info legend");
-        var limits = [128,64, 32, 16, 8, 4, 2, 0];
-        var colors = ['#800026', '#BD0026', '#E31A1C', '#FC4E2A', '#FD8D3C', '#FEB24C', '#FED976', '#FFEDA0'];
-        var labels = [];
-    
-    // Add min & max
-        var legendInfo = "<h1>Earthquake Depth</h1>" +
-        "<div class=\"labels\">" +
-            "<div class=\"min\">" + `${limits[0]} miles` + "</div>" +
-            "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-        "</div>";
-    
-        div.innerHTML = legendInfo;
-    
-        limits.forEach(function(limit, index) {
-            labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
-        });
-    
-        div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-        return div;
-        };
-    
-    return legend
-}   
+	function Legend()   {
+	// Set up the legend
+	var legend = L.control({ position: "bottomleft" });
+		legend.onAdd = function() {
+			var div = L.DomUtil.create("div", "info legend");
+			var limits = [128,64, 32, 16, 8, 4, 2, 0];
+			var colors = ['#800026', '#BD0026', '#E31A1C', '#FC4E2A', '#FD8D3C', '#FEB24C', '#FED976', '#FFEDA0'];
+			var labels = [];
+		
+		// Add min & max
+			var legendInfo = "<h1>Earthquake Depth</h1>" +
+			"<div class=\"labels\">" +
+				"<div class=\"min\">" + `${limits[0]} miles` + "</div>" +
+				"<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+			"</div>";
+		
+			div.innerHTML = legendInfo;
+		
+			limits.forEach(function(limit, index) {
+				labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+			});
+		
+			div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+			return div;
+			};
+		
+		return legend
+	}   
 """
 	
 ## Setup
 To run this project, download it locally from github:
 
 In bash:
-```
-$ git clone git@github.com:jwr1969/leaflet-challenge.git
-$ cd Leaflet-Step-2/
-$ python -m http.server
+"""
+	$ git clone git@github.com:jwr1969/leaflet-challenge.git
+	$ cd Leaflet-Step-2/
+	$ python -m http.server
 
-In your web browser:
+	In your web browser:
 
-localhost:8000
-```
+	localhost:8000
+"""
 
 John Russell
 07/07/2021
