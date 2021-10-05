@@ -42,15 +42,12 @@ The visualization is created with:
 ## Code Examples
 """
 	function Legend()   {
-	// Set up the legend
 	var legend = L.control({ position: "bottomleft" });
 		legend.onAdd = function() {
 			var div = L.DomUtil.create("div", "info legend");
 			var limits = [128,64, 32, 16, 8, 4, 2, 0];
 			var colors = ['#800026', '#BD0026', '#E31A1C', '#FC4E2A', '#FD8D3C', '#FEB24C', '#FED976', '#FFEDA0'];
 			var labels = [];
-		
-		// Add min & max
 			var legendInfo = "<h1>Earthquake Depth</h1>" +
 			"<div class=\"labels\">" +
 				"<div class=\"min\">" + `${limits[0]} miles` + "</div>" +
