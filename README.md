@@ -42,15 +42,15 @@ The visualization is created with:
 To run this project, download it locally from github:
 
 In bash:
-"""
-	$ git clone git@github.com:jwr1969/leaflet-challenge.git
-	$ cd Leaflet-Step-2/
-	$ python -m http.server
+```
+$ git clone git@github.com:jwr1969/leaflet-challenge.git
+$ cd Leaflet-Step-2/
+$ python -m http.server
 
-	In your web browser:
+In your web browser:
 
-	localhost:8000
-"""
+localhost:8000
+```
 
 John Russell
 07/07/2021
